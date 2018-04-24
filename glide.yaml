@@ -1,3 +1,0 @@
-package: api
-import:
-- package: github.com/google/logger
