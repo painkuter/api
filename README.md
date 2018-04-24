@@ -10,10 +10,15 @@
     * viper
 * test
     * assert
+    * fixtures
 * service factory
 * errors
 * query
     * NATs
+* transport
+    * gRPC
+    * REST
+    * jsonRPC
 
 #### Dependencies
 
