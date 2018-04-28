@@ -8,6 +8,7 @@ import (
 	"api/app/common/log"
 
 	"github.com/google/logger"
+	"api/app/services"
 )
 
 const appConfigFilePath = "config/config.dev.toml"
@@ -24,10 +25,9 @@ func InitApp() {
 
 	App := NewApplication(appConfigFilePath)
 	defer App.logger.Close()
-	//if err := App.InitServices(); err != nil {
-	//	logger.Errorf("Error services initializing: %v", err)
-	//	return
-	//}
+
+	service := services.InitService()
+
 
 	logger.Infof("App started with config: %#v", App.config)
 
